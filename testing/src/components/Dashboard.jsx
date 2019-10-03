@@ -8,9 +8,12 @@ export const Dashboard = () => {
   const [fouls, setFouls] = useState(0);
 
   const foulClick = () => {
-    strikes === 0 || strikes == 1
-      ? setStrikes(strikes + 1) && setStrikes(fouls + 1)
-      : setFouls(fouls + 1);
+    if (strikes === 0 || strikes === 1) {
+      setStrikes(strikes + 1);
+      setFouls(fouls + 1);
+    } else {
+      setFouls(fouls + 1);
+    }
   };
 
   return (
