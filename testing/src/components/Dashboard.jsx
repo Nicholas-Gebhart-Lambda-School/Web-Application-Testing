@@ -18,19 +18,20 @@ export const Dashboard = () => {
 
   return (
     <>
-      <button className="strikes" onClick={clickStrikes}>
+      <button className="strikes" onClick={clickStrikes} data-testid="strikes">
         {strikes >= 3 ? setStrikes(0) : null}
         Strikes
       </button>
-      <button className="balls" onClick={clickBalls}>
+      <button className="balls" onClick={clickBalls} data-testid="balls">
         {balls >= 4 ? setBalls(0) : null}
         Balls
       </button>
-      <button className="fouls" onClick={foulClick}>
+      <button className="fouls" onClick={foulClick} data-testid="fouls">
         Foul
       </button>
       <button
         className="hit"
+        data-testid="hit"
         onClick={() => {
           setBalls(0);
           setStrikes(0);
